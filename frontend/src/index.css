@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Syne:wght@400;600;700;800&display=swap');
+
+/*Light Theme*/
+:root{
+  --bg-primary:       #f4f4f5;
+  --bg-secondary:     #ffffff;
+  --bg-panel:         #e4e4e7;
+  --text-primary:     #09090b;
+  --text-secondary:   #52525b;
+  --text-muted:       #a1a1aa;
+  --border:           #d4d4d8;
+  --accent:           #6366f1;
+  --accent-hover:     #4f46e5;
+  --accent-soft:      #e0e7ff;
+  --node-class:       #6366f1;
+  --node-interface:   #10b981;
+  --node-abstract:    #f59e0b;
+  --node-orphan:      #ef4444;
+  --access-public:    #10b981;
+  --access-private:   #ef4444;
+  --access-protected: #f59e0b;
+  --access-package:   #6366f1;
+  --shadow:           0 4px 24px rgba(0,0,0,0.08);
+  --radius:           12px;
+}
+
+/*Dark Theme*/
+.dark{
+  --bg-primary:       #09090b;
+  --bg-secondary:     #18181b;
+  --bg-panel:         #27272a;
+  --text-primary:     #fafafa;
+  --text-secondary:   #a1a1aa;
+  --text-muted:       #52525b;
+  --border:           #3f3f46;
+  --accent:           #818cf8;
+  --accent-hover:     #6366f1;
+  --accent-soft:      #1e1b4b;
+  --node-class:       #818cf8;
+  --node-interface:   #34d399;
+  --node-abstract:    #fbbf24;
+  --node-orphan:      #f87171;
+  --access-public:    #34d399;
+  --access-private:   #f87171;
+  --access-protected: #fbbf24;
+  --access-package:   #818cf8;
+  --shadow:           0 4px 24px rgba(0,0,0,0.4);
+  --radius:           12px;
+}
+
+/*Base*/
+*{
+  margin:0;
+  padding : 0;
+  box-sizing:border-box;
+}
+
+body {
+  font-family: 'Syne',sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden;
+}
+
+/*Srollbar*/
+::-webkit-scrollbar{
+  width:6px;
+}
+
+::-webkit-scrollbar-track{
+  background: var(--bg-panel);
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--border);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: var(--accent);
+}
+
+/*React flow Canvas*/
+
+.react-flow__renderer {
+  background-color: var(--bg-primary) !important;
+}
+
+.react-flow__edge-path{
+  stroke: var(--accent) !important;
+  stroke-width: 2px;
+}
+
+.react-flow__edge-text{
+  fill: var(--text-secondary) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 11px !important;
+}
+
+.react-flow__controls{
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+}
+
+.react-flow__controls-button{
+  background: var(--bg-secondary) !important;
+  border-bottom: 1px solid var(--border) !important;
+  fill: var(--text-primary) !important;
+}
+
+.react-flow__minimap{
+  background: var(--bg-panel) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+}
+
+/*Utility Classes*/
+.panel{
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.badge{
+  font-family:'JetBrains Mono',monospace;
+  font-size: 10px;
+  padding:2px 7px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.btn{
+  font-family: 'Syne',sans-serif;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-panel);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover{
+  background:var(--accent);
+  color:#fff;
+  border-color: var(--accent);
+}
+
+.btn-accent{
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.btn-accent:hover{
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}

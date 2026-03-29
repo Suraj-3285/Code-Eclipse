@@ -55,7 +55,7 @@ export default function SnippetDropdown({ onSelect }) {
             {/* Snippet Options */}
             {snippets.map((snippet,index) => (
                 <option key={index} value = {index}>
-                    {snippet.label}-{snippet.description}
+                    {snippet.label} - {snippet.description}
                 </option>
             ))}
         </select>
